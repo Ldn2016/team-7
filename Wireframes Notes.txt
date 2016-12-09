@@ -1,0 +1,4 @@
+Wireframes Notes
+
+Home: Only show courses the user is enrolled in
+Don't worry about login details
