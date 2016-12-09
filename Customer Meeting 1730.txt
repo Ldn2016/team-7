@@ -1,0 +1,17 @@
+CUSTOMER MEETING 1730
+
+App must be able to work offline/with local raspberry pi server
+Must be extensible in courses
+Can redesign from their current app
+Simplified playlists
+Regular baseline tests performed (google form)
+Data tracking - how do we want to do it?
+They generate a heatmap from their baseline tests
+Data model - three kinds of exercises:
+	on playlist
+	related to subject
+	unrelated
+No original content - all links, essentially
+Decision - focus on learner or data tracking for MIS
+design for tricklenet
+Coaches cannot modify playlists
