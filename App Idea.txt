@@ -1,0 +1,28 @@
+CUSTOMER MEETING 1930 + APP IDEA
+
+APP Basics:
+Learner-facing
+Navigate playlists easily and allow new playlists
+	Show Playlist progress
+Reward System: (this is the big feature - making participation fun, engaging, and rewarding)
+	Gain points from completing suggestions
+		improving across baseline tests
+		scoring consistently high on baseline tests
+		completing playlists
+	Small features unlocked with points
+	Keep points small in size - remember these kids are barely numerate
+	Need to be applicable for any type of content, not just Khan Academy
+Suggestions:
+	Problem area - suggest other content on the subject
+		if possible, note whether this content proved effective, for future recommendations
+	Try to form a learner profile per student
+	Railroad them back onto the correct topics if they stray
+	
+Make everything smooth + pretty, and easily recognizable even for little african kids
+
+Tasks to do:
+Work out rewards for the system
+rip off khan academy rewards
+rip off their source code
+follow good software practices
+Make a kanban or trello board?
