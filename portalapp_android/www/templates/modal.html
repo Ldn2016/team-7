@@ -1,0 +1,17 @@
+<ion-modal-view class="passwordModal">
+  <ion-header-bar class="bar bar-header" id="passwordHeaderBar">
+    <h4>The Coach should enter the password</h4>
+  </ion-header-bar>
+  <ion-content class="padding-bottom" scroll="true">
+  <div ng-controller="formCtrl" class="list">
+    <label class="item item-input">
+      <input ng-model="password" type="password" class="form-control" id="passwordInput" required>
+    </label>
+    <p class="password-error" ng-show="wrongPassword==true">Sorry, that is not the correct password. Please try again</p>
+    <div class="item button-bar" id="submit-passwords-btns">
+      <a class ="button" id="passwordSubmitBtn" ng-click="checkPassword(password)">OK</a>
+      <a class ="button" id="passwordCancelBtn" ng-click="closeModal()">CANCEL</a>
+    </div>        
+  </div>
+  </ion-content>
+</ion-modal-view>

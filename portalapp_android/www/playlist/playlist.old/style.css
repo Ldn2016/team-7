@@ -1,0 +1,71 @@
+body{
+	background-color: #CCFFCC;
+}
+
+.Bigrow{
+	background-color: white;
+	opacity:0.999999;
+}
+
+.edulogo{
+	margin-left: 14%;
+}
+
+.kalogo{
+	margin-left: 38%;
+}
+
+.playlistTitle{
+	text-align: center;
+	color: green;
+	margin-top: 1%;
+}
+
+.topicTitle{
+	margin-left: 42%;
+	margin-top: 11%;
+	color: green;
+}
+
+.exercise_btn{
+	border-radius: 100% !important;
+	border: 2px solid green;
+}
+.icon_text{
+	text-align: center;
+}
+
+.exercise{
+	border: 0 !important;
+	padding: 0 !important;
+	margin-left: 3%;
+}
+
+.videos.exercise{
+	margin-left: 10%;
+}
+
+.exercise a{
+	text-decoration: none;
+}
+
+.exercise a:hover{
+	color: green;
+}
+.exercise a:visited{
+	color: green;
+}
+
+.maintopic{
+	padding-bottom: 2%;
+}
+
+.head{
+	margin-left: 1%;
+	border-radius: 100% !important;
+
+}
+
+.videos{
+	padding-top: 1%;
+}

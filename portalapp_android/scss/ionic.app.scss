@@ -1,0 +1,147 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+// Include all of Ionic
+@import "www/lib/ionic/scss/ionic";
+
+/* variables */
+
+$prealpha-color: #F4D19C;
+$alpha-color: #CCFFCC;
+$bravo-color: #C5D9F1;
+$charlie-color: #FDE9D9;
+$button-shadow: 2px 2px 2px 2px #3F3F3F;
+$gradient-top: #D3E8BF;
+$gradient-bottom: #60713E;
+
+
+
+/*html, body{
+	height: 100%;
+}*/
+#mainBody{
+	background: -webkit-linear-gradient($gradient-top, $gradient-bottom); /* For Safari 5.1 to 6.0 */
+  	background: -o-linear-gradient($gradient-top, $gradient-bottom); /* For Opera 11.1 to 12.0 */
+  	background: -moz-linear-gradient($gradient-top, $gradient-bottom); /* For Firefox 3.6 to 15 */
+  	background: linear-gradient($gradient-top, $gradient-bottom) fixed repeat; /* Standard syntax */
+  	text-align: center;
+  	font-family: "Arial,Helvetica,sans-serif"
+}
+
+#header{
+	background: white;
+}
+#foundationalMaths{
+	padding-top:5%;
+}
+.course-list{
+	border-color: rgba(0, 0, 0, 0);
+	background-color: rgba(0, 0, 0, 0);
+	color: white; 
+}
+
+.course-content-text{
+	white-space: normal !important
+}
+
+.course-list.info{
+	margin-top: -3%;
+}
+ .course-info{
+ 	background: white;
+ }
+
+.plylstlink{
+ 	text-decoration: none;
+ }
+
+#prealpha-heading{
+	background-color: $prealpha-color;
+	border: $prealpha-color;
+	box-shadow: $button-shadow;
+}
+#alpha-heading{
+	background-color: $alpha-color;
+	border: $alpha-color;
+	box-shadow: $button-shadow;
+}
+#bravo-heading{
+	background-color: $bravo-color;
+	border: $bravo-color;
+	box-shadow: $button-shadow;
+
+}
+
+#charlie-heading{
+	background-color: $charlie-color;
+	border: $charlie-color;
+	box-shadow: $button-shadow;
+
+}
+
+#passwordHeaderBar{
+	background-color: $gradient-top;
+	h4{
+		margin-left:23%;
+
+	}
+}
+
+.passwordModal{
+	height:20% !important;
+	width:60%;
+	margin-top:-2%;
+}
+.password-error{
+	color:red;
+	text-align:center;
+}
+
+#submit-passwords-btns{
+	width:60%;
+	margin-left:20%;
+	margin-top:0.5%;
+}
+
+
+#passwordSubmitBtn{
+	margin-right:1%;
+	background-color:#5189ce;
+	color: white;
+
+}
+
+#passwordCancelBtn{
+	background-color: $gradient-bottom;
+	color: white;
+}
+
+#passwordInput{
+	border:2px solid black;
+	width:60%;
+	margin-left:20%;
+	margin-right:20%;
+	text-align:center;
+}
+
+.version_number{
+	float: right;
+}
+

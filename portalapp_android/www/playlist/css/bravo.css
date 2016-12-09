@@ -1,0 +1,71 @@
+table, .playlist_title{
+	text-align: center;
+}
+
+table, .titlerow{
+	background-color: white;
+}
+
+body{
+	background-color: #C5D9F1;
+}
+
+.elogo{
+	margin-left: 20%;
+}
+
+.topic{
+
+	border: 1px solid green;
+	width: 63%;
+	border-radius: 10px;
+	padding-top: 0.5%;
+	padding-bottom: 0.5%;
+	margin-left: 20%;
+	background: white none repeat scroll 0% 0%;
+	padding-left: 7%;
+	box-shadow: 0 1px 1px;
+}
+
+
+a{
+	color: black;
+}
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+a:active {
+    text-decoration: none;
+    color: black;
+}
+
+.exercise_icon{
+	color: #3B22A8;
+}
+
+.titlerow{
+	padding-bottom: 1%;
+}
+
+.assesment_name{
+	text-align: left;
+}
+
+.playlist_title{
+	margin-top: 6%;
+}
+
+.collapse{
+	margin-top: -0.7%;
+}

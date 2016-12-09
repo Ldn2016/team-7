@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bravo C</title>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/bravo.css">
+	<script src="../lib/ionic/js/ionic.bundle.js"></script>
+	<script src="../cordova.js"></script>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+	<script src="js/playlists.js"></script>
+</head>
+<body>
+	<!-- Playlist title and edulution logo -->
+	<div class="row titlerow">
+		<div class="col-md-3">
+			<a href="../index.html"><img src="elogo.png" class="elogo"></a>
+		</div>
+		<div class="col-md-6">
+			<h2 class="playlist_title">Bravo D Playlist</h2>
+		</div>
+		<div class="col-md-3">
+			<a href="#" onclick="window.open('http://192.168.8.200:8008', '_system','location=yes')"><img src="kalitelogo.jpg" class="elogo"></a>
+		</div>		
+	</div>
+	<div class="container" id="menu" class="panel-group">
+		<div class="row panel" >
+			<div data-toggle="collapse" data-target="#aplhaA1" data-parent="#menu">
+				<h3 class="topic"><img src="bravoimgs/lin.png">   Introduction to Algebra</h3>
+			</div>
+			<div class="col-md-6 col-md-offset-3 panel-collapse collapse" id="aplhaA1">
+				<table class="table">
+					<tr onclick="playlisturl('Bravo','D',0)">
+						<td>
+							<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+						</td>
+						<td>
+							<h4 class="assesment_name">Writing expressions 1</h4>
+						</td>
+						</tr>				
+						<tr onclick="playlisturl('Bravo','D',1)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Writing expressions 2</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',2)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Writing expression 1 </h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',3)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Writing expression 2</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',4)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Combining like terms</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',5)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Combining like terms 2</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',6)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Combining like terms</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',7)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Combining like terms and disruptive property</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',8)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Evaluating expression with two variables</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',9)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Evaluating expressions with one variable</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',10)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Evaluating expression with one variable</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',11)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Evaluating expressions 2 </h4>
+							</td>
+						</tr>					
+				</table>
+
+				
+			</div>
+		</div>
+			<div class="row panel">
+				<div data-toggle="collapse" data-target="#aplhaA2" data-parent="#menu">
+				
+					<h3 class="topic"><img src="bravoimgs/lineq.png">   Linear Equations and Inequalities</h3>	
+				</div>
+				<div class="col-md-6 col-md-offset-3 panel-collapse collapse" id="aplhaA2">
+					<table class="table">
+						<tr onclick="playlisturl('Bravo','D',12)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">One step equations with multiplication</h4>
+							</td>
+						</tr>
+						<tr onclick="playlisturl('Bravo','D',13)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">One step Equations</h4>
+							</td>
+						</tr>				
+						<tr onclick="playlisturl('Bravo','D',14)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Linear equations 1</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',15)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Linear equations 1</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',16)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Inequalities using multiplication and division</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',17)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Inequalities using addition and subtraction</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',18)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">One step inequalities </h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',19)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Two step inequalities</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',20)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Linear inequalities</h4>
+							</td>
+						</tr>					
+					</table>
+
+				
+				</div>
+			</div>
+			<div class="row panel">
+				<div data-toggle="collapse" data-target="#aplhaA3" data-parent="#menu">
+					<h3 class="topic"><img src="bravoimgs/lin.png">   Graphing and Analysing Linear functions</h3>	
+				</div>
+				<div class="col-md-6 col-md-offset-3 panel-collapse collapse" id="aplhaA3">
+					<table class="table">
+						<tr onclick="playlisturl('Bravo','D',21)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Descartes and the Cartesian Coordinates</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',22)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">The coordinate plane</h4>
+							</td>
+						</tr>					
+						<tr onclick="playlisturl('Bravo','D',23)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Graphing point</h4>
+							</td>
+						</tr>						
+						<tr onclick="playlisturl('Bravo','D',24)">
+							<td>
+								<i class="fa fa-play-circle-o fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Plot ordered pairs</h4>
+							</td>
+						</tr>						
+						<tr onclick="playlisturl('Bravo','D',25)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Graphing points</h4>
+							</td>
+						</tr>						
+						<tr onclick="playlisturl('Bravo','D',26)">
+							<td>
+								<i class="fa fa-pencil fa-2x exercise_icon" aria-hidden="true"></i>
+							</td>
+							<td>
+								<h4 class="assesment_name">Points on the coordinate plane</h4>
+							</td>
+						</tr>											
+					</table>				
+						
+				
+				</div>
+			</div>			
+			
+			
+	</div>
+
+</body>
+</html>

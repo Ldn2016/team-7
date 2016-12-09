@@ -1,0 +1,7 @@
+{
+    "name": "Edulution Portal",
+    "description": "Edulution playlists and tests",
+    "repository": "https://bitbucket.org/edulution/portalapp_android",
+    "logo": "http://resources/icon.png",
+    "keywords": ["edulution", "playlists", "tests"]
+}
