@@ -98,3 +98,21 @@ class Baseline(models.Model):
     percent_b = models.IntegerField()
     percent_c = models.IntegerField()
     percent_d = models.IntegerField()
+
+class Badges(models.Model):
+    """
+    Class for the Badges (Achievements)
+    """
+    name = models.TextField()
+    description = models.TextField()
+    points = models.IntegerField()
+    condition = models.TextField()
+    user = models.ManyToManyField(Client)
+
+class Unlockables(models.Model):
+    """
+    Class for the Unlockable items
+    """
+    name = models.TextField()
+    points = models.Integerfield()
+    user = models.ManyToManyField(Client)
