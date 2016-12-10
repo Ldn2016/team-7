@@ -38,8 +38,8 @@
 
     <nav class="navbar navbar-default navbar-fixed-top material-shadow-menu">
       <div class="container-fluid">
-        <div class="row">
-        <div class="col-md-6">
+        
+        
         <div class="navbar-header">
 
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
@@ -50,17 +50,16 @@
           </button>
           <a class="navbar-brand" href="#">Edulution</a>
         </div>
-        <div id="navbar" class="collapse navbar-collapse">
+        <div id="navbar" class="collapse navbar-collapse pull-right">
           <ul class="nav navbar-nav">
-            <li><a href="#">Home</a></li>
-
+            <a role="button" class="nav-bar-points"><span class="glyphicon glyphicon-certificate"></span> 100 Points</a>
+            <a role="button" class="nav-bar-logout" ng-hide="!mainCtrl.loggedIn()" ng-click="mainCtrl.logout()">Logout</a>
           </ul>
         </div><!--/.nav-collapse -->
-      </div>
-      <div class="col-md-3">
-	    <button type="button" class="btn btn-default"> 100 Points</button>
-	    <button type="button" class="btn btn-default" ng-hide="!mainCtrl.loggedIn()" ng-click="mainCtrl.logout()">Logout</button>
-        </div>
+      
+      
+	    
+       
       <div class="row">
       <div class="col-md-8">
       </div>

@@ -141,4 +141,21 @@ body {
     padding-left: 260px;
 }
 
+.nav-bar-points {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    line-height: 50px;
+    margin-right: 20px;
+}
+
+.nav-bar-points span {
+    color: #4caf50;
+}
+
+.nav-bar-points:hover {
+    color: #4caf50;
+    text-decoration: none;
+}
 
