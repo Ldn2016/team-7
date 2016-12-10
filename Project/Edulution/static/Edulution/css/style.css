@@ -150,13 +150,17 @@ body {
     margin-right: 20px;
 }
 
-.nav-bar-points span {
+.nav-bar-points span:first-child {
     color: #4caf50;
 }
 
 .nav-bar-points:hover {
     color: #4caf50;
     text-decoration: none;
+}
+
+.alert-success {
+    display: none;
 }
 
 

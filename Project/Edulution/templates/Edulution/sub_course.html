@@ -8,6 +8,7 @@
     <div class="container">
         <div class="sub_course-content col-xs-offset-2 col-xs-8 material-shadow-menu">
             <h1 class="sub_course-name">{{ course.name }}</h1>
+            <div class="alert alert-success" role="alert"><strong>Well done!</strong> +1 Point.</div>
             <div class="sub_course-parts">
                 <ul>
                     {% for playlist in playlists %}
@@ -21,9 +22,12 @@
                             <div class="parts sc-parts">
                                 <ul>
                                     {% for item in playlist.items %}
+                                    {% if item.complete == 1 %}
                                     <li class="part-completed"><a href="#">{{ item.title }}</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    {% else %}
+                                    <li><a class="not-completed" href="#">{{ item.title }}</a></li>
+                                    {% endif %}
                                     {% endfor %}
-                                    <li><a href="#">Nullam gravida nunc </a></li>
                                 </ul>
                             
                           </div>
