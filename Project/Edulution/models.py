@@ -114,5 +114,5 @@ class Unlockables(models.Model):
     Class for the Unlockable items
     """
     name = models.TextField()
-    points = models.Integerfield()
+    points = models.IntegerField()
     user = models.ManyToManyField(Client)
