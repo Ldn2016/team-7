@@ -15,7 +15,7 @@ class Item(models.Model):
 
 	TYPES = (
 		("vid","Video"),
-		"exr","Exercise",
+		("exr","Exercise"),
 		)
 
 	type = models.CharField(max_length=3,choices=TYPES)
