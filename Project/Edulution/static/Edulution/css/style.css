@@ -159,4 +159,8 @@ body {
     text-decoration: none;
 }
 
+.alert-success {
+    display: none;
+}
+
 
