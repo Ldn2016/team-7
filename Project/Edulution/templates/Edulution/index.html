@@ -1,28 +1,150 @@
-{% extends 'Edulution/base.html' %}
+<!DOCTYPE html>
+<html lang="en" ng-app="mainApp">
+{% load staticfiles %}
+<head>
+ <meta charset="utf-8">
+ 	<!-- bootstrap -->
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+  	<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-{% load static %}
 
-{% block content %}
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+ 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-<div class="row">
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 1</h2>    
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 2</h2> 
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 3</h2>     
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 4</h2> 
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 5</h2>     
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 6</h2> 
-    </div>
+ 	<!-- AngularJS -->
+<!--	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script> -->
+	<script src="{% static 'AngularJS/ng-modules/angular148.js' %}"></script>	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+
+	<script src="{% static 'AngularJS/ng-modules/angular-animate.js' %}"></script>	
+	<script src="{% static 'AngularJS/ng-modules/angular-touch148.js' %}"></script>	
+	<script src="{% static 'AngularJS/ng-modules/ui-bootstrap-tpls-2.0.2.js' %}"></script>	
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-route.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-cookies.js"></script>
+
+
+	<script src="{% static 'AngularJS/app.js' %}"></script>		
+	<script src="{% static 'AngularJS/controllers/angularJSControllers.js' %}"></script>	
+	<title></title>	
+
+
+</head>
+<body ng-controller="mainController as mainCtrl">
+
+<div class="page-header">
+	<div class="container">
+		<div class="row titlerow">
+			<div class="col-md-6"><img class="img-rounded" width='200' height='100' src="{% static 'images/logo.png' %}"></div>
+			<div class="col-md-4"></div>
+			<div class="col-md-2">
+	    <button type="button" class="btn btn-default" ng-hide="mainCtrl.loggedIn()" ng-click="mainCtrl.open('login')">Login</button>
+	    <button type="button" class="btn btn-default" ng-hide="mainCtrl.loggedIn()" ng-click="mainCtrl.open('register')">Register</button>
+	    <button type="button" class="btn btn-default" ng-hide="!mainCtrl.loggedIn()" ng-click="mainCtrl.logout()">Logout</button>	  		
+			</div>	
+		</div>		
+	
+	</div>
 </div>
+	<!-- Login Modal -->
+	<div>
+	       <script type="text/ng-template" id="login.html">
+	        <div class="modal-header">
+	            <h3 class="modal-title">Login</h3>
+	        </div>
+	        <div class="modal-body">
+		        <div ng-show="instanceCtrl.error">
+		        	<span ng-bind="instanceCtrl.error"></span>
+		        </div>	        
+		        <form ng-submit="instanceCtrl.ok()" name="loginForm">
+		        	<div>
+						Username: <input type="text" class="username" name="username" ng-model="instanceCtrl.userInfo.username" required ng-minlength="4">
+						<span ng-show="loginForm.username.$error.required && loginForm.username.$dirty">This is a required field.</span>
+						<span ng-show="loginForm.username.$error.minlength && loginForm.username.$dirty">Minimum length required is 4.</span>			
+		        	</div>
+		        	<div>
+		 				Password: <input type="password" name="password" ng-model="instanceCtrl.userInfo.password" required>
+						<span ng-show="loginForm.password.$error.required && loginForm.password.$dirty">This is a required field.</span>       		
+		        	</div>
+					<input type="submit" value="Submit" ng-disabled="loginForm.$invalid">        	
+		        </form>
+		    </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-warning" type="button" ng-click="instanceCtrl.cancel()">Cancel</button>
+	        </div>
+	    </script>
+	<!-- END OF LOGIN MODAL -->
 
-{% endblock %}
+	<!-- Registration Modal / under construction /  -->
+	       <script type="text/ng-template" id="register.html">
+	        <div class="modal-header">
+	            <h3 class="modal-title">Registration</h3>
+	        </div>
+	        <div class="modal-body">
+	        		<div ng-show="instanceCtrl.error">
+		        		<span ng-bind="instanceCtrl.error"></span>
+		        	</div>
+		        <form ng-submit="instanceCtrl.ok()" name="registrationForm">
+		        	<div>
+						Username: <input type="text" class="username" name="username" ng-model="instanceCtrl.userInfo.username" required ng-minlength="4">
+						<span ng-show="registrationForm.username.$error.required && registrationForm.username.$dirty">This is a required field.</span>
+						<span ng-show="registrationForm.username.$error.minlength && registrationForm.username.$dirty">Minimum length required is 4.</span>			
+		        	</div>
+		        	<div>
+		 				Password: <input type="password" name="password" ng-model="instanceCtrl.userInfo.password" required>
+						<span ng-show="registrationForm.password.$error.required && registrationForm.password.$dirty">This is a required field.</span>       		
+		        	</div>
+		        	<div>
+		 				Repeat password: <input type="password" name="confirmPassword" ng-model="instanceCtrl.userInfo.confirmPassword" required="" password-confirm match-target="instanceCtrl.userInfo.password">
+						<span ng-show="registrationForm.confirmPassword.$error.required && registrationForm.confirmPassword.$dirty">This is a required field.</span>  
+						<span ng-show="registrationForm.confirmPassword.$error.match && registrationForm.confirmPassword.$dirty">Passwords do not match.</span> 		
+		        	</div>	  
+		        	<div>
+		 				E-mail: <input type="email" name="email" ng-model="instanceCtrl.userInfo.email" required>
+						<span ng-show="registrationForm.email.$error.required && registrationForm.email.$dirty">This is a required field.</span>
+						<span ng-show="registrationForm.email.$error.email && registrationForm.email.$dirty">Please enter a valid e-mail</span>  					       		
+		        	</div>
+		        	<div>
+						First Name: <input type="text" name="firstName" ng-model="instanceCtrl.userInfo.firstName" required ng-minlength="4">
+						<span ng-show="registrationForm.firstName.$error.required && registrationForm.firstName.$dirty">This is a required field.</span>
+						<span ng-show="registrationForm.firstName.$error.minlength && registrationForm.firstName.$dirty">Minimum length required is 4.</span>			
+		        	</div>
+		        	<div>
+						Last name: <input type="text" name="lastName" ng-model="instanceCtrl.userInfo.lastName" required ng-minlength="4">
+						<span ng-show="registrationForm.lastName.$error.required && registrationForm.lastName.$dirty">This is a required field.</span>
+						<span ng-show="registrationForm.lastName.$error.minlength && registrationForm.lastName.$dirty">Minimum length required is 4.</span>			
+		        	</div>	
+		        	<div>
+		 				Telephone: <input type="tel" name="telephone" ng-model="instanceCtrl.userInfo.telephone" required ng-pattern="/\d{10}/">
+						<span ng-show="registrationForm.telephone.$error.required && registrationForm.telephone.$dirty">This is a required field.</span>  
+						<span ng-show="registrationForm.telephone.$error.pattern && registrationForm.telephone.$dirty">Please enter a valid telephone number</span>      		
+		        	</div>
+					<ng-form name="address">
+						<div>
+						    Street: <input type="text" name="street" ng-model="instanceCtrl.userInfo.street" required>
+		        		</div>
+						<div>
+							City: <input type="text" name="city" ng-model="instanceCtrl.userInfo.city" required>
+		        		</div>
+						<div>
+							Province: <input type="text" name="province" ng-model ="instanceCtrl.userInfo.province" required="">
+		        		</div>
+						<div>
+							Postcode: <input type="text" name="postcode" ng-model="instanceCtrl.userInfo.postcode">
+		        		</div>					
+					</ng-form>
+						<span ng-show="registrationForm.address.$invalid">Please fill out the profile information.</span>
+					<input type="submit" value="Submit" ng-disabled="registrationForm.$invalid">        	
+		        </form>
+		    </div>
+	        <div class="modal-footer">
+	            <button class="btn btn-warning" type="button" ng-click="instanceCtrl.cancel()">Cancel</button>
+	        </div>
+	    </script>
+
+	<!-- END OF REGISTRATION MODAL -->
+
+<div ng-view></div>
+
+</body>
+</html>
+

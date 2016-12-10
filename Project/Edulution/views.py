@@ -10,3 +10,7 @@ def index(request):
     """
 
     return render(request, "Edulution/index.html")
+
+def courses(request):
+
+    return render(request, "Edulution/courses.html")
