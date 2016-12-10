@@ -16,11 +16,6 @@ def index(request):
 
 def courses(request):
 
-    return render(request, "Edulution/courses.html")
-
-def course(request, sub_course_name):
-
-    # return render(request, "Edulution/sub_course.html", {'sub_course_name': sub_course_name})
     context = {'subjects': Subject.objects.all()}
     percent = 100
 
@@ -36,3 +31,7 @@ def course(request, sub_course_name):
 
     return render(request, "Edulution/courses.html", context)
 
+
+def course(request, sub_course_name):
+
+    return render(request, "Edulution/sub_course.html", {'sub_course_name': sub_course_name})
