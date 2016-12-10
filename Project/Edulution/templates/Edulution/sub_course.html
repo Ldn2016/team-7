@@ -1,0 +1,78 @@
+{% extends 'Edulution/base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="container">
+        <div class="sub_course-content col-xs-offset-2 col-xs-8 material-shadow-menu">
+            <h1 class="sub_course-name">{{ sub_course_name }}</h1>
+            <div class="sub_course-parts">
+                <ul>
+                    <li>
+                        <div class="points-circle">5</div>
+                        <a class="sub_course-collapse" role="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                          Button with data-target <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="collapseExample">
+                          
+                            <div class="parts sc-parts">
+                                <ul>
+                                    <li class="part-completed"><a href="#">Lorem ipsum dolor sit amet</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Consectetur adipiscing elit</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Sed sed auctor neque</a> <span class="glyphicon glyphicon-ok"></li>
+                                    <li><a href="#">Nullam gravida nunc</a></li>
+                                    <li><a href="#">Nullam gravida nunc 2</a></li>
+                                </ul>
+                            
+                          </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="points-circle">7</div>
+                        <a class="sub_course-collapse" role="button" data-toggle="collapse" data-target="#collapseExample2" aria-expanded="false" aria-controls="collapseExample2">
+                          Button with data-target <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="collapseExample2">
+                          
+                            <div class="parts sc-parts">
+                                <ul>
+                                    <li class="part-completed"><a href="#">Lorem ipsum dolor sit amet</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Consectetur adipiscing elit</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Sed sed auctor neque</a> <span class="glyphicon glyphicon-ok"></li>
+                                    <li><a href="#">Nullam gravida nunc</a></li>
+                                    <li><a href="#">Nullam gravida nunc 2</a></li>
+                                </ul>
+                            
+                          </div>
+                        </div>
+                    </li>
+
+                    <li>
+                        <div class="points-circle">10</div>
+                        <a class="sub_course-collapse" role="button" data-toggle="collapse" data-target="#collapseExample3" aria-expanded="false" aria-controls="collapseExample3">
+                          Button with data-target <span class="caret"></span>
+                        </a>
+                        <div class="collapse" id="collapseExample3">
+                          
+                            <div class="parts sc-parts">
+                                <ul>
+                                    <li class="part-completed"><a href="#">Lorem ipsum dolor sit amet</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Consectetur adipiscing elit</a> <span class="glyphicon glyphicon-ok"></span></li>
+                                    <li class="part-completed"><a href="#">Sed sed auctor neque</a> <span class="glyphicon glyphicon-ok"></li>
+                                    <li><a href="#">Nullam gravida nunc</a></li>
+                                    <li><a href="#">Nullam gravida nunc 2</a></li>
+                                </ul>
+                            
+                          </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
