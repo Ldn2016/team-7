@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from Edulution.models import *
+
+admin.site.register(Client)
