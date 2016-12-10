@@ -150,7 +150,7 @@ body {
     margin-right: 20px;
 }
 
-.nav-bar-points span {
+.nav-bar-points span:first-child {
     color: #4caf50;
 }
 

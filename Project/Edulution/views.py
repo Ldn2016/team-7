@@ -43,6 +43,7 @@ def course(request, course_id):
         playlist_items = ItemOnPlaylist.objects.filter(playlist=list).order_by('sequence')
         list.items = []
         for pair in playlist_items:
+            pair.item.complete = random.randint(1, 2)
             list.items.append(pair.item)
         list.length = len(list.items)
 
