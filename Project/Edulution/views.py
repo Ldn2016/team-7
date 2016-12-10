@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.http import JsonResponse, HttpResponseRedirect,\
     HttpResponse, HttpRequest, Http404
+from models import *
+from django.contrib.auth.models import User
 
 def index(request):
     """

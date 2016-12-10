@@ -5,12 +5,25 @@ import datetime
 from django.utils import timezone
 
 # open to extentions
+
+
+class Subject(models.Model):
+    """
+    Class for each subject, e.g. Numeracy, Literacy, Health...
+    """
+    title = models.TextField()
+
+    def __str__(self):
+        return self.title
+
+
 class Client(models.Model):
     """
     Class for each user, based on Django users
     """
     user = models.OneToOneField(User)
-    score = models.IntegerField()
+    score = models.IntegerField(default=0)
+    enrolled_in = models.ManyToManyField(Subject)
 
 
 class Item(models.Model):
@@ -18,7 +31,6 @@ class Item(models.Model):
     Class for each 'item' of content
     Broken into types vid and exr
     """
-    user = models.ManyToManyField(Client)
 
     title = models.TextField()
 
@@ -32,6 +44,9 @@ class Item(models.Model):
     exercise_id = models.CharField(max_length=128)
     video_id = models.CharField(max_length=128)
     path = models.CharField(max_length=500)
+
+    def __str__(self):
+        return self.title
 
 
 class ExerciseLog(models.Model):
@@ -48,12 +63,8 @@ class ExerciseLog(models.Model):
     streak_progress = models.IntegerField()
     attempts_before_completion = models.IntegerField()
 
-
-class Subject(models.Model):
-    """
-    Class for each subject, e.g. Numeracy, Literacy, Health...
-    """
-    title = models.TextField()
+    def __str__(self):
+        return self.user_id + " " + self.exercise_id
 
 
 class Course(models.Model):
@@ -63,6 +74,9 @@ class Course(models.Model):
     name = models.TextField()
     subject = models.ForeignKey(Subject)
 
+    def __str__(self):
+        return self.name
+
 
 class Section(models.Model):
     """
@@ -71,6 +85,8 @@ class Section(models.Model):
     name = models.TextField()
     course = models.ForeignKey(Course)
 
+    def __str__(self):
+        return self.name
 
 class Playlist(models.Model):
     """
@@ -81,6 +97,21 @@ class Playlist(models.Model):
     user = models.ManyToManyField(Client)
     item = models.ManyToManyField(Item)
 
+    def __str__(self):
+        return self.name
+
+
+class ItemOnPlaylist(models.Model):
+    """
+    Class for many to many between item and playlist
+    with extra variable sequence
+    """
+
+    item = models.ForeignKey(Item)
+    playlist = models.ForeignKey(Playlist)
+    sequence = models.IntegerField()
+
+
 
 class Baseline(models.Model):
     """
@@ -90,6 +121,7 @@ class Baseline(models.Model):
     user = models.ForeignKey(User)
     course = models.ForeignKey(Course)
     test_count = models.IntegerField()
+    date = models.DateField()
     percent = models.IntegerField()
     test = models.CharField(max_length=50)
 
@@ -98,6 +130,9 @@ class Baseline(models.Model):
     percent_b = models.IntegerField()
     percent_c = models.IntegerField()
     percent_d = models.IntegerField()
+
+    def __str__(self):
+        return self.user + " " + str(self.percent) + "%"
 
 class Badges(models.Model):
     """
@@ -109,6 +144,9 @@ class Badges(models.Model):
     condition = models.TextField()
     user = models.ManyToManyField(Client)
 
+    def __str__(self):
+        return self.name
+
 class Unlockables(models.Model):
     """
     Class for the Unlockable items
@@ -116,3 +154,6 @@ class Unlockables(models.Model):
     name = models.TextField()
     points = models.IntegerField()
     user = models.ManyToManyField(Client)
+
+    def __str__(self):
+        return self.name
