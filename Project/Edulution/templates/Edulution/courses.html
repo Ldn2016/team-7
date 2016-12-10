@@ -5,11 +5,35 @@
 {% block content %}
 
 <div class="row">
+
+    {% for subject in subjects %}
     <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 1</h2> 
+        <h2 class="course-title">
+            {% if subject.percent == 100 %}
+            <span style="color: #4caf50">
+            {{ subject.title }}</span><span class="glyphicon glyphicon-ok" style="color: #4caf50"></span>
+            {% else %}
+            {{ subject.title }}
+            {% endif %}
+        </h2>
         <!-- <div class="progress">    -->
-            <div class="c100 p60 big">
-              <span>60%</span>
+            <div class="c100 p{{ subject.percent }} big">
+              <span>
+                  {% if subject.title == 'Mathematics' %}
+                  <img src="{% static "Edulution/images/number.png" %}" alt="Mathematics" />
+                  {% elif subject.title == 'Literacy' %}
+                  <img src="{% static "Edulution/images/letter.png" %}" alt="Literacy"/>
+                                    {% elif subject.title == 'Hackathon Winning' %}
+                  <img src="{% static "Edulution/images/hackathon.jpg" %}" alt="Hackathon Winning" width="120" height="75" />
+                                    {% elif subject.title == 'Disk Jockery' %}
+                  <img src="{% static "Edulution/images/dj.jpg" %}" alt="Disk Jockery" width="100" height="100"/>
+                  {% elif subject.title == 'Health' %}
+                  <img src="{% static "Edulution/images/health.jpg" %}" alt="Health" width="100" height="100"/>
+
+
+                    {% endif %}
+
+              </span>
               <div class="slice">
                 <div class="bar"></div>
                 <div class="fill"></div>
@@ -19,43 +43,19 @@
 
         <div class="parts">
             <ul>
-                <li class="part-completed"><a href="#">Lorem ipsum dolor sit amet</a> <span class="glyphicon glyphicon-ok"></span></li>
-                <li class="part-completed"><a href="#">Consectetur adipiscing elit</a> <span class="glyphicon glyphicon-ok"></span></li>
-                <li class="part-completed"><a href="#">Sed sed auctor neque</a> <span class="glyphicon glyphicon-ok"></li>
-                <li><a href="#">Nullam gravida nunc</a></li>
-                <li><a href="#">Nullam gravida nunc 2</a></li>
+                {% for course in subject.courses %}
+                {% if course.complete %}
+                <li class="part-completed"><a href="#">{{ course.name }}</a> <span class="glyphicon glyphicon-ok"></span></li>
+                {% else %}
+                <li><a href="#">{{ course.name }}</a></li>
+                {% endif %}
+
+                {% endfor %}
             </ul>
         </div>
     </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 2</h2> 
-        <div class="c100 p30 big">
-          <span>30%</span>
-          <div class="slice">
-            <div class="bar"></div>
-            <div class="fill"></div>
-          </div>
-        </div>
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 3</h2> 
-        <div class="c100 p45 big">
-          <span>45%</span>
-          <div class="slice">
-            <div class="bar"></div>
-            <div class="fill"></div>
-          </div>
-        </div>    
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 4</h2> 
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 5</h2>     
-    </div>
-    <div class="course col-md-4 col-sm-6 col-xs-12 material-shadow-card">
-        <h2 class="course-title">Course 6</h2> 
-    </div>
+
+    {% endfor %}
 </div>
 
 {% endblock %}
