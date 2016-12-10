@@ -32,6 +32,20 @@ def courses(request):
     return render(request, "Edulution/courses.html", context)
 
 
-def course(request, sub_course_name):
+def course(request, course_id):
 
-    return render(request, "Edulution/sub_course.html", {'sub_course_name': sub_course_name})
+    sub_course = Course.objects.get(id=course_id)
+
+    sections = Section.objects.filter(course=sub_course)
+    playlists = Playlist.objects.filter(section__in=sections)
+
+    for list in playlists:
+        playlist_items = ItemOnPlaylist.objects.filter(playlist=list).order_by('sequence')
+        list.items = []
+        for pair in playlist_items:
+            list.items.append(pair.item)
+        list.length = len(list.items)
+
+        print list.items
+    return render(request, "Edulution/sub_course.html", {'course': sub_course,
+                                                         'playlists': playlists})
