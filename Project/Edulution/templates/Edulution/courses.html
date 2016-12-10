@@ -45,9 +45,9 @@
             <ul>
                 {% for course in subject.courses %}
                 {% if course.complete %}
-                <li class="part-completed"><a href="#">{{ course.name }}</a> <span class="glyphicon glyphicon-ok"></span></li>
+                <li class="part-completed"><a href="/sub_course/{{ course.name }}">{{ course.name }}</a> <span class="glyphicon glyphicon-ok"></span></li>
                 {% else %}
-                <li><a href="#">{{ course.name }}</a></li>
+                <li><a href="/sub_course/{{ course.name }}">{{ course.name }}</a></li>
                 {% endif %}
 
                 {% endfor %}
