@@ -10,6 +10,7 @@ $(document).ready(function () {
         var points = parseInt($('#points').text());
         points += 1
         $('#points').html(points.toString());
+        $(this).removeClass('not-completed').after(' <span class="glyphicon glyphicon-ok"></span>').parent().addClass('part-completed');
 
     })
 });
